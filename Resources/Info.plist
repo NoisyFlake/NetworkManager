@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleName</key>
 	<string>NetworkManager</string>
+	<key>CFBundleDisplayName</key>
+	<string>Network Manager</string>
 	<key>CFBundleExecutable</key>
 	<string>NetworkManager</string>
 	<key>CFBundleIdentifier</key>
