@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>enable2G</key>
+	<true/>
+	<key>enable3G</key>
+	<true/>
+	<key>enableLTE</key>
+	<true/>
+	<key>selectedNetwork</key>
+	<string>0</string>
+</dict>
+</plist>

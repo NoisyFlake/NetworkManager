@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>						<string>PSGroupCell</string>
+			<key>footerCellClass</key>			<string>NetworkManagerLogo</string>
+ 		</dict>
+
+ 		<dict>
+			<key>cell</key> 					<string>PSGroupCell</string>
+			<key>label</key> 					<string>Module Settings</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>						<string>PSSwitchCell</string>
+			<key>default</key>					<true/>
+			<key>defaults</key>					<string>com.noisyflake.networkmanager</string>
+			<key>key</key>						<string>enable2G</string>
+			<key>label</key>					<string>Enable 2G</string>
+			<key>PostNotification</key> 		<string>com.noisyflake.networkmanager/prefsupdated</string>
+		</dict>
+		<dict>
+			<key>cell</key>						<string>PSSwitchCell</string>
+			<key>default</key>					<true/>
+			<key>defaults</key>					<string>com.noisyflake.networkmanager</string>
+			<key>key</key>						<string>enable3G</string>
+			<key>label</key>					<string>Enable 3G</string>
+			<key>PostNotification</key> 		<string>com.noisyflake.networkmanager/prefsupdated</string>
+		</dict>
+		<dict>
+			<key>cell</key>						<string>PSSwitchCell</string>
+			<key>default</key>					<true/>
+			<key>defaults</key>					<string>com.noisyflake.networkmanager</string>
+			<key>key</key>						<string>enableLTE</string>
+			<key>label</key>					<string>Enable LTE</string>
+			<key>PostNotification</key> 		<string>com.noisyflake.networkmanager/prefsupdated</string>
+		</dict>
+
+		<dict>
+			<key>cell</key> 					<string>PSGroupCell</string>
+			<key>label</key> 					<string>Support</string>
+		</dict>
+		<dict>
+            <key>cell</key> 		            <string>PSLinkCell</string>
+            <key>cellClass</key> 	            <string>CCNMRedditCell</string>
+            <key>height</key> 		            <real>60.0</real>
+            <key>hasIcon</key> 		            <true/>
+        </dict>
+        <dict>
+            <key>cell</key> 		            <string>PSLinkCell</string>
+            <key>cellClass</key> 	            <string>CCNMTwitterCell</string>
+            <key>height</key> 		            <real>60.0</real>
+            <key>hasIcon</key> 		            <true/>
+        </dict>
+
+		<dict>
+			<key>cell</key> 					<string>PSGroupCell</string>
+			<key>footerText</key> 				<string>Developed with ♥ by NoisyFlake</string>
+			<key>footerAlignment</key> 			<string>1</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string></string>
+</dict>
+</plist>

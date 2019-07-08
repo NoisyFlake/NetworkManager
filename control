@@ -1,0 +1,9 @@
+Package: com.noisyflake.networkmanager
+Name: NetworkManager
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Force 2G/3G/LTE connection from the Control Center
+Maintainer: NoisyFlake
+Author: NoisyFlake
+Section: Control Center (Modules)
