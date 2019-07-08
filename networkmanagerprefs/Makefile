@@ -1,5 +1,8 @@
 include $(THEOS)/makefiles/common.mk
 
+export TARGET = iphone:clang:11.2:11.0
+export ARCHS = arm64 arm64e
+
 BUNDLE_NAME = NetworkManagerPrefs
 
 NetworkManagerPrefs_FILES = CCNMRootListController.m
