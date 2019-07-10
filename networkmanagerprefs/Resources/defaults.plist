@@ -8,6 +8,8 @@
 	<true/>
 	<key>enableLTE</key>
 	<true/>
+	<key>useCDMA</key>
+	<false/>
 	<key>selectedNetwork</key>
 	<string>0</string>
 </dict>

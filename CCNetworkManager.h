@@ -19,6 +19,12 @@ extern CFStringRef kCTRegistrationRATSelection0;
 extern CFStringRef kCTRegistrationRATSelection1;
 #define kUMTS kCTRegistrationRATSelection1
 
+extern CFStringRef kCTRegistrationRATSelection3;
+#define kCDMA kCTRegistrationRATSelection3
+
+extern CFStringRef kCTRegistrationRATSelection4;
+#define kEVDO kCTRegistrationRATSelection4
+
 extern CFStringRef kCTRegistrationRATSelection6;
 #define kLTE kCTRegistrationRATSelection6
 

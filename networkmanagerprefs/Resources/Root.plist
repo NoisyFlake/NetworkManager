@@ -19,7 +19,7 @@
 			<key>default</key>					<true/>
 			<key>defaults</key>					<string>com.noisyflake.networkmanager</string>
 			<key>key</key>						<string>enable2G</string>
-			<key>label</key>					<string>Enable 2G</string>
+			<key>label</key>					<string>Show 2G Toggle</string>
 			<key>PostNotification</key> 		<string>com.noisyflake.networkmanager/prefsupdated</string>
 		</dict>
 		<dict>
@@ -27,7 +27,7 @@
 			<key>default</key>					<true/>
 			<key>defaults</key>					<string>com.noisyflake.networkmanager</string>
 			<key>key</key>						<string>enable3G</string>
-			<key>label</key>					<string>Enable 3G</string>
+			<key>label</key>					<string>Show 3G Toggle</string>
 			<key>PostNotification</key> 		<string>com.noisyflake.networkmanager/prefsupdated</string>
 		</dict>
 		<dict>
@@ -35,7 +35,22 @@
 			<key>default</key>					<true/>
 			<key>defaults</key>					<string>com.noisyflake.networkmanager</string>
 			<key>key</key>						<string>enableLTE</string>
-			<key>label</key>					<string>Enable LTE</string>
+			<key>label</key>					<string>Show LTE Toggle</string>
+			<key>PostNotification</key> 		<string>com.noisyflake.networkmanager/prefsupdated</string>
+		</dict>
+
+		<dict>
+			<key>cell</key> 					<string>PSGroupCell</string>
+			<key>label</key> 					<string>Network Settings</string>
+			<key>footerText</key> 				<string>Activate this only if your carrier is Sprint or Verizon or if you don't get any signal when forcing 2G/3G</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>						<string>PSSwitchCell</string>
+			<key>default</key>					<false/>
+			<key>defaults</key>					<string>com.noisyflake.networkmanager</string>
+			<key>key</key>						<string>useCDMA</string>
+			<key>label</key>					<string>Use CDMA instead of GSM</string>
 			<key>PostNotification</key> 		<string>com.noisyflake.networkmanager/prefsupdated</string>
 		</dict>
 

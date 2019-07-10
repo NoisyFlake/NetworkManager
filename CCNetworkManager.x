@@ -9,7 +9,7 @@ int selectedNetwork = 0;
   UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
   label.textColor = [UIColor blackColor];
   label.backgroundColor=[UIColor clearColor];
-  label.baselineAdjustment = UIBaselineAdjustmentAlignBaselines; // or UIBaselineAdjustmentAlignCenters, or UIBaselineAdjustmentNone
+  label.baselineAdjustment = UIBaselineAdjustmentAlignBaselines;
   label.adjustsFontSizeToFitWidth = YES;
   label.minimumScaleFactor = 10.0f/12.0f;
   label.clipsToBounds = YES;
@@ -17,16 +17,17 @@ int selectedNetwork = 0;
 
   if (selectedNetwork == 0) {
     label.font = [label.font fontWithSize:12];
-    label.text = @"Auto\nNetwork";
     label.numberOfLines = 2;
+
+    label.text = @"Auto\nNetwork";
   } else {
     label.font = [label.font fontWithSize:25];
     label.numberOfLines = 1;
-  }
 
-  if (selectedNetwork == 1) label.text= @"2G";
-  if (selectedNetwork == 2) label.text= @"3G";
-  if (selectedNetwork == 3) label.text= @"LTE";
+    if (selectedNetwork == 1) label.text= @"2G";
+    if (selectedNetwork == 2) label.text= @"3G";
+    if (selectedNetwork == 3) label.text= @"LTE";
+  }
 
   UIGraphicsBeginImageContextWithOptions(label.bounds.size, NO, 0.0);  // high res
   [[label layer] renderInContext: UIGraphicsGetCurrentContext()];
@@ -85,12 +86,21 @@ static void setSelectedNetwork() {
   if (selectedNetwork == 0) {
     _CTServerConnectionSetRATSelection(cn, kAutomatic, 0);
   } else if (selectedNetwork == 1) {
-      _CTServerConnectionSetRATSelection(cn, kGSM, 0);
+      if (getBool(@"useCDMA")) {
+        _CTServerConnectionSetRATSelection(cn, kCDMA, 0);
+      } else {
+        _CTServerConnectionSetRATSelection(cn, kGSM, 0);
+      }
   } else if (selectedNetwork == 2) {
-      _CTServerConnectionSetRATSelection(cn, kUMTS, 0);
+      if (getBool(@"useCDMA")) {
+        _CTServerConnectionSetRATSelection(cn, kEVDO, 0);
+      } else {
+        _CTServerConnectionSetRATSelection(cn, kUMTS, 0);
+      }
   } else if (selectedNetwork == 3) {
       _CTServerConnectionSetRATSelection(cn, kLTE, 0);
   }
+
 }
 
 // ----- PREFERENCE HANDLING ----- //
