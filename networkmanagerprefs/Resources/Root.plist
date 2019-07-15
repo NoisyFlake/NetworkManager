@@ -12,6 +12,7 @@
  		<dict>
 			<key>cell</key> 					<string>PSGroupCell</string>
 			<key>label</key> 					<string>Module Settings</string>
+			<key>footerText</key> 				<string>Custom text for the toggle in auto mode</string>
 		</dict>
 
 		<dict>
@@ -36,6 +37,16 @@
 			<key>defaults</key>					<string>com.noisyflake.networkmanager</string>
 			<key>key</key>						<string>enableLTE</string>
 			<key>label</key>					<string>Show LTE Toggle</string>
+			<key>PostNotification</key> 		<string>com.noisyflake.networkmanager/prefsupdated</string>
+		</dict>
+		<dict>
+			<key>cell</key> 					<string>PSEditTextCell</string>
+			<key>default</key> 					<string></string>
+			<key>defaults</key> 				<string>com.noisyflake.networkmanager</string>
+			<key>placeholder</key> 				<string>Auto Network</string>
+			<key>noAutoCorrect</key> 			<true/>
+			<key>key</key> 						<string>customText</string>
+			<key>label</key> 					<string></string>
 			<key>PostNotification</key> 		<string>com.noisyflake.networkmanager/prefsupdated</string>
 		</dict>
 

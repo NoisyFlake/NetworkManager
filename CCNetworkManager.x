@@ -17,9 +17,23 @@ int selectedNetwork = 0;
 
   if (selectedNetwork == 0) {
     label.font = [label.font fontWithSize:12];
-    label.numberOfLines = 2;
 
-    label.text = @"Auto\nNetwork";
+    NSString *customText = getValue(@"customText") ? getValue(@"customText") : @"";
+
+    if ([customText length] > 0) {
+      // String contains space that should be converted to linebreak
+      if ([customText rangeOfString:@" "].location != NSNotFound) {
+        label.numberOfLines = 2;
+        customText = [customText stringByReplacingOccurrencesOfString:@" " withString:@"\n"];
+      } else {
+        label.numberOfLines = 1;
+      }
+      label.text = customText;
+    } else {
+      label.numberOfLines = 2;
+      label.text = @"Auto\nNetwork";
+    }
+
   } else {
     label.font = [label.font fontWithSize:25];
     label.numberOfLines = 1;
@@ -113,6 +127,10 @@ static BOOL getBool(NSString *key) {
   }
 
   return [ret boolValue];
+}
+
+static NSString* getValue(NSString *key) {
+  return [prefs objectForKey:key] ?: [defaultPrefs objectForKey:key];
 }
 
 static void writeSelectedNetwork() {

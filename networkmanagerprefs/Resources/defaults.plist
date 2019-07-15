@@ -10,6 +10,8 @@
 	<true/>
 	<key>useCDMA</key>
 	<false/>
+	<key>customText</key>
+	<string></string>
 	<key>selectedNetwork</key>
 	<string>0</string>
 </dict>

@@ -4,6 +4,7 @@
 @end
 
 static BOOL getBool(NSString *key);
+static NSString* getValue(NSString *key);
 static void writeSelectedNetwork();
 
 static void setSelectedNetwork();
